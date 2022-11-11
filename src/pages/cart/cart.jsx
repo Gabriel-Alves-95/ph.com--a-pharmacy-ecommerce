@@ -16,24 +16,10 @@ import DoDisturbAltIcon from '@mui/icons-material/DoDisturbAlt';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
-
-
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-
-
-
-
 function Cart() {
 
     const context = useContext(ListsContext);             
-    const [quantity, setQuantity] = useState(0);     
-
-
-
-    const [cart, setCart] = useState(context.cartList.cart);
-
-
-
+    const [quantity, setQuantity] = useState(0);  
 
     let total = 0;
  
@@ -49,144 +35,127 @@ function Cart() {
 
                 {
                     context.cartList.cart.length !== 0                      
-                    ?   <TransitionGroup component="div" className="test">
-                            {
-                                context.cartList.cart.map( (item, index) => {  
-                                // cart.map( (item, index) => {  
-                                                                                    
-                                    const product = Object.values(productList).find( product => product.code === item.productCode );                          
-                                                                
-                                    if ( !isNaN(item.quantity) ) {
-                                        total += product.price*(1 - product.discountPercentage*0.01)*item.quantity;
-                                    }                       
-                                                                        
-                                    return(                                
-
-                                        <CSSTransition key={index} timeout={700} nodeRef={item.nodeRef} classNames="item">
-                                            <div className="product-row" ref={item.nodeRef}>                                    
-
-                                                <div
-                                                    className="product-image"
-                                                    style={{
-                                                        backgroundImage: `url(${product.images[0]})`
-                                                    }}
-                                                >                                
-                                                </div>
-
-                                                <div className="product-info">
-
-                                                    <h2>{product.name}</h2>
-
-                                                    <span>Code: {product.code}</span>
-
-                                                    <Rating
-                                                        className="rating-stars"                                               
-                                                        defaultValue={product.rating.value}
-                                                        precision={0.5}
-                                                        readOnly 
-                                                    />
-
-                                                </div>   
-
-                                                <div className="quantity-container">                                        
-
-                                                    <div className="quantity">
-
-                                                        <IconButton                                            
-                                                            sx={{
-                                                                '&:hover': {
-                                                                    backgroundColor: '#f7fcff'
-                                                                }
-                                                            }}                    
-                                                            onClick={ () => context.cartList.updateCart(product.code, item.quantity - 1) }
-                                                        >
-                                                            <RemoveIcon
-                                                                fontSize="small"
-                                                                style={{
-                                                                    color: '#212121'
-                                                                }}
-                                                            />                
-                                                        </IconButton>                                                       
+                    ?   context.cartList.cart.map( item => {       
+                                                  
+                            const product = Object.values(productList).find( product => product.code === item.productCode );                          
                                                         
-                                                        <input                            
-                                                            type="number"                                            
-                                                            min="0"
-                                                            value={item.quantity}                                                                                        
-                                                            onFocus={ () => setQuantity(item.quantity) }
-                                                            onChange={ (e) => context.cartList.updateCart(product.code,  parseInt(e.target.value)) }
-                                                            onBlur={ () => isNaN(item.quantity) ? context.cartList.updateCart(product.code, quantity) : null }
-                                                        />
+                            if ( !isNaN(item.quantity) ) {
+                                total += product.price*(1 - product.discountPercentage*0.01)*item.quantity;
+                            }                       
+                                                                
+                            return(                                
+                                
+                                <div className="product-row" ref={item.nodeRef}>                                    
 
-                                                        <IconButton                                            
-                                                            sx={{
-                                                                '&:hover': {
-                                                                    backgroundColor: '#f7fcff'
-                                                                }
-                                                            }}
-                                                            onClick={ () => context.cartList.updateCart(product.code, item.quantity + 1) }
-                                                        >
-                                                            <AddIcon
-                                                                fontSize="small"
-                                                                style={{
-                                                                    color: '#212121'
-                                                                }}
-                                                            />
-                                                        </IconButton>
-                                                                        
-                                                    </div>
+                                    <div
+                                        className="product-image"
+                                        style={{
+                                            backgroundImage: `url(${product.images[0]})`
+                                        }}
+                                    >                                
+                                    </div>
 
-                                                    <IconButton
-                                                        sx={{
-                                                            color: '#44a6f1',
+                                    <div className="product-info">
+
+                                        <h2>{product.name}</h2>
+
+                                        <span>Code: {product.code}</span>
+
+                                        <Rating
+                                            className="rating-stars"                                               
+                                            defaultValue={product.rating.value}
+                                            precision={0.5}
+                                            readOnly 
+                                        />
+
+                                    </div>   
+
+                                    <div className="quantity-container">                                        
+
+                                        <div className="quantity">
+
+                                            <IconButton                                            
+                                                sx={{
+                                                    '&:hover': {
+                                                        backgroundColor: '#f7fcff'
+                                                    }
+                                                }}                    
+                                                onClick={ () => context.cartList.updateCart(product.code, item.quantity - 1) }
+                                            >
+                                                <RemoveIcon
+                                                    fontSize="small"
+                                                    style={{
+                                                        color: '#212121'
+                                                    }}
+                                                />                
+                                            </IconButton>                                                       
+                                            
+                                            <input                            
+                                                type="number"                                            
+                                                min="0"
+                                                value={item.quantity}                                                                                        
+                                                onFocus={ () => setQuantity(item.quantity) }
+                                                onChange={ (e) => context.cartList.updateCart(product.code,  parseInt(e.target.value)) }
+                                                onBlur={ () => isNaN(item.quantity) ? context.cartList.updateCart(product.code, quantity) : null }
+                                            />
+
+                                            <IconButton                                            
+                                                sx={{
+                                                    '&:hover': {
+                                                        backgroundColor: '#f7fcff'
+                                                    }
+                                                }}
+                                                onClick={ () => context.cartList.updateCart(product.code, item.quantity + 1) }
+                                            >
+                                                <AddIcon
+                                                    fontSize="small"
+                                                    style={{
+                                                        color: '#212121'
+                                                    }}
+                                                />
+                                            </IconButton>
                                                             
-                                                            '&:hover': {
-                                                                backgroundColor: '#f7fcff'
-                                                            }
-                                                        }}
-                                                        // onClick={ (e) => context.cartList.removeItem(e, product.code) } 
-                                                        onClick={ (e) => context.cartList.removeItem(e, product.code) }
-                                                        // onClick={() => {
+                                        </div>
 
-                                                        //     setCart( cart.filter( (item, idx) =>  idx !== index ) );                                                            
-
-                                                        //     // setTimeout( () => {
-                                                        //     //     context.cartList.removeItem(product.code);
-                                                        //     // },);
-
-
-                                                        // }}
-                                                    >
-                                                        <DeleteOutlineOutlinedIcon/>
-                                                    </IconButton>                                    
-
-                                                </div>  
+                                        <IconButton
+                                            sx={{
+                                                color: '#44a6f1',
                                                 
-                                                {
-                                                    product.discountPercentage !== 0
-                                                    ? <div className="price-container">
-                                                        <span className="price">
-                                                            {(product.price*(1 - product.discountPercentage*0.01)).toLocaleString("en-US", {style:"currency", currency:"USD"})}
-                                                        </span>
-                                                        <span className="old-price">
-                                                            {product.price.toLocaleString("en-US", {style:"currency", currency:"USD"})}
-                                                        </span>
-                                                    </div>                                                                  
-                                                    : <div className="price-container">
-                                                        <span className="price">
-                                                            {product.price.toLocaleString("en-US", {style:"currency", currency:"USD"})}
-                                                        </span>
-                                                    </div>
+                                                '&:hover': {
+                                                    backgroundColor: '#f7fcff'
+                                                }
+                                            }}                                            
+                                            onClick={ () => context.cartList.removeItem(product.code) }                                            
+                                        >
+                                            <DeleteOutlineOutlinedIcon/>
+                                        </IconButton>                                    
 
-                                                }                                                                           
+                                    </div>  
+                                    
+                                    {
+                                        product.discountPercentage !== 0
+                                        ? <div className="price-container">
+                                            <span className="price">
+                                                {(product.price*(1 - product.discountPercentage*0.01)).toLocaleString("en-US", {style:"currency", currency:"USD"})}
+                                            </span>
+                                            <span className="old-price">
+                                                {product.price.toLocaleString("en-US", {style:"currency", currency:"USD"})}
+                                            </span>
+                                        </div>                                                                  
+                                        : <div className="price-container">
+                                            <span className="price">
+                                                {product.price.toLocaleString("en-US", {style:"currency", currency:"USD"})}
+                                            </span>
+                                        </div>
 
-                                            </div>
-                                        </CSSTransition>
-                                        
-                                    )
+                                    }                                                                           
+
+                                </div>                                
+                                
+                            )
                         
-                                })
-                            }
-                        </TransitionGroup>
+                        })
+                            
                     :   <div className="empty-cart">
                             <div className="cart-icons">
                                 <DoDisturbAltIcon

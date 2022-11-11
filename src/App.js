@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, createRef } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './pages/home/home';
 import Product from './pages/product/product';
@@ -28,31 +28,17 @@ function App() {
     if ( productIndex > -1 ) {
       newCart[productIndex].quantity = quantity;      
     } else {
-      newCart.push({'productCode': code, 'quantity': quantity, nodeRef: createRef(null)});
+      newCart.push({'productCode': code, 'quantity': quantity});
     }
 
     setCart(newCart);
 
   };
 
-  const removeItem = (event, itemCode) => {
-
-    // const item = cart.find(item => item.productCode === itemCode);
-    // const itemIndex = cart.indexOf(item);
-    // const newCart = cart.slice(0, itemIndex).concat(cart.slice(itemIndex + 1, cart.length)); 
-    
-    // event.target.closest(".product-row").style = "animation: smoothing-deletion .5s ease forwards";
-     
+  const removeItem = (itemCode) => {
 
     setCart( value => value.filter( item => item.productCode !== itemCode ) );           
-    // event.target.closest(".product-row").closest('.product-row').style = "animation: smoothing-deletion .5s ease forwards";
-    
-    // setTimeout( () => {
 
-    //   setCart( newCart );
-    //   // event.target.closest(".product-row").style = "animation: none";            
-
-    // }, 700);
 
   }
 

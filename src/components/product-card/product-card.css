@@ -80,12 +80,12 @@ input[type=number] {
     height: 200px;    
 }
 
-.product-card > h2 {
-    color: #212121;
-    font-size: 1.2rem;    
-    font-weight: 600;
+.product-card > a > h2 {
+    color: #212121;    
+    font-weight: 500;
     line-height: 1.6rem;
     margin-bottom: 2px;
+    min-height: 51.19px ;
 }
 
 .product-card > .laboratory-info {
