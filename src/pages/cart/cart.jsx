@@ -36,7 +36,7 @@ function Cart() {
                 {
                     context.cartList.cart.length !== 0                      
                     ?   context.cartList.cart.map( item => {       
-                                                  
+
                             const product = Object.values(productList).find( product => product.code === item.productCode );                          
                                                         
                             if ( !isNaN(item.quantity) ) {
@@ -78,6 +78,13 @@ function Cart() {
                                                 sx={{
                                                     '&:hover': {
                                                         backgroundColor: '#f7fcff'
+                                                    },
+                                                    '@media screen and (max-width: 1024.98px)': {
+                                                        '&:hover': {
+                                                            backgroundColor: 'transparent'
+                                                        },'&:active': {
+                                                            backgroundColor: '#f7fcff'
+                                                        }
                                                     }
                                                 }}                    
                                                 onClick={ () => context.cartList.updateCart(product.code, item.quantity - 1) }
@@ -103,6 +110,14 @@ function Cart() {
                                                 sx={{
                                                     '&:hover': {
                                                         backgroundColor: '#f7fcff'
+                                                    },
+                                                    '@media screen and (max-width: 1024.98px)': {
+                                                        '&:hover': {
+                                                            backgroundColor: 'transparent'
+                                                        },
+                                                        '&:active': {
+                                                            backgroundColor: '#f7fcff'
+                                                        }
                                                     }
                                                 }}
                                                 onClick={ () => context.cartList.updateCart(product.code, item.quantity + 1) }
@@ -117,13 +132,18 @@ function Cart() {
                                                             
                                         </div>
 
-                                        <IconButton
+                                        <IconButton 
+                                            disableRipple={true}                                           
                                             sx={{
-                                                color: '#44a6f1',
-                                                
+                                                color: '#44a6f1',                                                
                                                 '&:hover': {
                                                     backgroundColor: '#f7fcff'
-                                                }
+                                                },
+                                                '@media screen and (max-width: 1024.98px)': {
+                                                    '&:hover': {
+                                                        backgroundColor: 'transparent'
+                                                    }
+                                                },
                                             }}                                            
                                             onClick={ () => context.cartList.removeItem(product.code) }                                            
                                         >

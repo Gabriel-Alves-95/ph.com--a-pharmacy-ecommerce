@@ -49,8 +49,7 @@ input[type=number] {
     padding: 15px 20px; 
     box-sizing: content-box;
     border: 2px solid #44a6f1;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 10px;    
     transition: transform .3s ease;
 }
 
@@ -169,8 +168,7 @@ input[type=number] {
     background-color: #44a6f1;
     border: none;
     border-top-right-radius: 19px;
-    border-bottom-right-radius: 19px;
-    cursor: pointer;
+    border-bottom-right-radius: 19px;    
 }
 
 .product-info-container > .details-container > .add-to-cart-container > .add-to-cart-button:hover {
@@ -178,7 +176,7 @@ input[type=number] {
 }
 
 .product-info-container > .details-container > .add-to-cart-container > .add-to-cart-button:active {
-    background-color: #4ba6ed;    
+    background-color: #7bc6ff !important;    
 }
 
 @media screen and (max-width: 1300.98px) {
@@ -187,6 +185,18 @@ input[type=number] {
         flex-wrap: wrap-reverse;
     }    
 
+}
+
+@media screen and (max-width: 1024.98px) {
+    
+    .product-info-container > .images-container > .secondary-images-container > .image-secondary:hover {
+        transform: none;
+    }
+
+    .product-info-container > .details-container > .add-to-cart-container > .add-to-cart-button:hover {
+        background-color: #44a6f1;
+    }
+    
 }
 
 @media screen and (max-width: 900.98px) {

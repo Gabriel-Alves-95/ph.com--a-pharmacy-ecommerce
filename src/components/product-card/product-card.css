@@ -184,8 +184,8 @@ input[type=number] {
     background-color: #2287d0;
 }
 
-.product-card > .add-to-cart-container > .add-to-cart-button:active {
-    background-color: #4ba6ed;    
+.product-card > .add-to-cart-container > .add-to-cart-button:active {        
+    background-color: #7bc6ff !important;
 }
 
 .add-to-cart-button:hover .add-to-cart-container {
@@ -214,6 +214,10 @@ input[type=number] {
     
     .product-card .favorite-icon {
         right: 0;
+    }
+
+    .product-card > .add-to-cart-container > .add-to-cart-button:hover {
+        background-color: #44a6f1;
     }
 
 }
