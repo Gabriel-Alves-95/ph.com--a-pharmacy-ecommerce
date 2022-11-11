@@ -1,0 +1,37 @@
+.tab  h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tab ul {
+    padding-left: 20px;
+}
+
+.tab ul > li {
+    margin: 5px 0;
+}
+
+.tab ul > li::marker {
+    color: #44a6f1;
+}
+
+.tab span {
+    font-weight: 600;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #44a6f1 !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: #929292 !important;
+    font-family: 'Noto Sans', sans-serif !important;    
+}
+
+.css-1aquho2-MuiTabs-indicator {
+    background-color: #44a6f1 !important;
+}
+
+.MuiTabs-scrollButtons {
+    color: #44a6f1 !important;
+}

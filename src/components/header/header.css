@@ -1,0 +1,319 @@
+header {
+    box-shadow: 0 -30px 35px #929292; 
+}
+
+header > hr {
+    height: 1px; 
+    background-color: rgb(142, 198, 240);        
+}
+
+header > hr:nth-child(2) {
+    display: none;    
+}
+
+/* BEGIN .top-nav STYLING */
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.top-nav nav {
+    display: flex;
+    gap: 30px;
+}
+
+.top-nav a,
+.top-nav a:visited,
+.top-nav a:hover,
+.top-nav a:active {
+    color: #212121;
+    font-weight: 500;
+    text-decoration: none;    
+}
+
+.top-nav .basic-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.top-nav .basic-info .phone-and-address {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-nav .basic-info .phone-and-address .phone {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.top-nav .basic-info .phone-and-address .address {
+    color: #929292;
+    font-weight: 300;
+}
+
+.top-nav .basic-info .location {
+    display: flex;
+    align-items: center;
+    color: #212121;    
+}
+
+.top-nav .basic-info .location span {
+    line-height: 1.2rem;
+    position: relative;    
+}
+
+.top-nav .basic-info .location span::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: calc(5%);
+    border-bottom: 1px solid #44a6f1;
+    width: 90%;   
+}
+
+/* END .top-nav STYLING */
+
+/* BEGIN .header-main STYLING */
+
+.header-main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.header-main .catalog-button {
+    font-family: 'Noto Sans', sans-serif; 
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 30px;    
+    background-color: #44a6f1;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: none;
+    transition: background-color .5s ease;
+}
+
+.header-main .catalog-button:hover {
+    background-color: #2287d0;
+    box-shadow: none;
+}
+
+.header-main .catalog-button:active {
+    background-color: #4ba6ed;
+}
+
+.header-main .catalog-button svg {
+    height: 17px;
+}
+
+.header-main .search-bar {
+    display: flex;
+    align-items: center;    
+    border-radius: 25px;
+    border: 2px solid #44a6f1;
+    width: 100%;
+    max-width: 900px;
+}
+
+.header-main .search-bar svg {
+    color: #929292;
+    margin: 0 8px 0 12px;
+}
+
+.header-main .search-bar input {
+    border: none;
+    color: #212121;    
+    width: 100%;
+}
+
+.header-main .search-bar input::placeholder {
+    color: #929292; 
+}
+
+.header-main .search-bar input:focus {
+    outline: none;
+}
+
+.header-main .search-bar button {
+    padding: 8px 30px;
+    background-color: #44a6f1;
+    border-radius: 0;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+.header-main .search-bar button:hover {
+    box-shadow: none;
+    background-color: #2287d0;
+}
+
+.header-main .search-bar button:active {
+    background-color: #4ba6ed;    
+}
+
+.header-main > .account-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.header-main > .account-navigation .MuiBadge-badge {
+    background-color: #eb4d4d;    
+    right: -12px;
+}
+
+/* END .header-main STYLING */
+
+/* BEGIN .down-nav STYLING */
+
+.down-nav {    
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.down-nav a,
+.down-nav a:visited,
+.down-nav a:hover,
+.down-nav a:active {
+    color: #212121;
+    text-decoration: none;   
+    font-weight: 500;  
+}
+
+/* END .down-nav STYLING */
+
+@media screen and (max-width: 1700.98px) {
+
+    .header-main .search-bar {
+        max-width: 750px;
+    }    
+
+}
+
+@media screen and (max-width: 1500.98px) {
+    
+    .header-main .search-bar {
+        max-width: 600px;
+    }    
+
+}
+
+@media screen and (max-width: 1300.98px) {
+
+    header > hr {
+        display: none;
+    }
+
+    header > hr:nth-child(2) {
+        display: block;
+    }
+
+    .top-nav {
+        justify-content: flex-end;
+        padding-bottom: 10px;
+    }
+
+    .top-nav nav {
+        display: none;
+    }
+    
+    .header-main .search-bar {
+        max-width: 450px;
+    } 
+    
+    .down-nav {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .header-main .search-bar button {
+        cursor: unset;
+    }
+
+}
+
+@media screen and (max-width: 1100.98px) {
+
+    .top-nav .basic-info {
+        width: 100%;
+        flex-flow: row-reverse;
+    }
+
+    .top-nav .basic-info .location span {
+        position: static;
+    }
+
+    .top-nav .basic-info .location span::after {
+        content: none;
+    }
+
+    .header-main {
+        gap: 25px 200px;
+        flex-wrap: wrap;
+
+    }
+
+    .header-main > .catalog-button,
+    .header-main .search-bar {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 700.98px) {
+
+    .top-nav .basic-info,
+    .top-nav .basic-info .phone-and-address {
+        gap: 13px;
+    }
+
+    .header-main {
+        justify-content: center;        
+    }
+
+    .header-main > .account-navigation {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width: 500.98px) {
+
+    .top-nav .basic-info .phone-and-address .address {
+        display: none;
+    }
+
+    .header-main .logo img {
+        width: 110px;
+    }
+
+    .header-main > .account-navigation {
+        gap: 0;
+    }
+
+}

@@ -1,0 +1,42 @@
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color: #44a6f1 !important;
+}
+
+.recovery-password {
+    font-size: .8rem;
+    margin: 25px 0 !important;
+}
+
+.recovery-password,
+.recovery-password:visited {
+    color: #44a6f1;
+}
+
+.recovery-password:hover {
+    color: #2287d0;
+}
+
+.recovery-password:active {
+    color: #4ba6ed;
+}
+
+.register-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;    
+    margin-top: 50px !important;
+}
+
+.register-link > a {
+    color: #44a6f1;
+} 
+
+.register-link > a:hover {
+    color: #2287d0;
+}
+
+.register-link > a:active {
+    color: #4ba6ed;
+}

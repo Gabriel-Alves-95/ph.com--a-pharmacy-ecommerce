@@ -1,0 +1,218 @@
+footer {    
+    margin-top: 70px;
+    padding-top: 12px;
+    background-color: #f2f2f2;
+}
+
+footer > hr {
+    border-color: #4ba6ed !important;
+    margin: 25px 0 !important;
+}
+
+/* BEGIN OF .footer-contact STYLING */
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;        
+    flex-wrap: wrap;
+}
+
+.footer-contact > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.footer-contact .address {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+
+.footer-contact .address span:last-child {
+    font-size: .8rem;
+    color: #929292;
+    font-weight: 300;
+    margin-left: 10px;    
+}
+
+.footer-contact > div > h2 {
+    color: #7f7f7f;    
+}
+
+.footer-contact > div > div {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact > div > div > span,
+.footer-contact > div > div > div > span:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #212121;
+    line-height: 1.5rem;
+}
+
+.footer-contact > div > div > svg,
+.footer-contact > div > div > a {
+    color: #44a6f1;
+}
+
+.footer-contact > div > div {
+    display: flex;
+    gap: 10px;    
+}
+
+.footer-contact .subscribe {    
+    border: 2px solid #44a6f1;
+    border-radius: 25px;        
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contact .subscribe input {
+    width: 100%;
+    min-width: 280px;
+    color: #212121;    
+    background-color: transparent;
+    border: none;    
+    height: 40px;
+    padding: 15px 15px;
+    box-sizing: border-box;
+}
+
+.footer-contact .subscribe input::placeholder {
+    color: #929292;
+    font-weight: 300;
+}
+
+.footer-contact .subscribe input:focus {
+    outline: none;
+}
+
+.footer-contact .subscribe button {
+    padding-left: 35px;
+    padding-right: 15px;
+    background-color: #44a6f1;
+    border-radius: 0;
+    color: #fff;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+/* END OF .footer-contact STYLING */
+
+/* BEGIN OF .footer-main STYLING */
+
+.footer-main {
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1352px;
+}
+
+.footer-main > nav > h2 {
+    color: #212121;
+    font-size: 1.2rem;
+    font-weight: 600;    
+}
+
+.footer-main > nav > ul {
+    padding: 0;    
+}
+
+.footer-main > nav > ul > li {
+    list-style: none;
+    text-decoration: none;       
+    margin: 10px 0;
+}
+
+.footer-main > nav > ul > li > a,
+.footer-main > nav > ul > li > a:visited,
+.footer-main > nav > ul > li > a:hover,
+.footer-main > nav > ul > li > a:active {
+    text-decoration: none;
+    color: #212121;
+}
+
+/* END OF .footer-main STYLING */
+
+/* BEGIN OF .footer-strip STYLING */ 
+
+.footer-strip {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.footer-strip > div {
+    display: flex;
+    align-items: center;
+    color: #212121;    
+    gap: 20px;
+}
+
+.footer-strip > img {
+    height: 30px;
+}
+
+/* END OF .footer-strip STYLING */
+
+@media screen and (max-width: 900.98px) {
+
+    .footer-main,
+    hr {
+        display: none;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-strip > div {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 700.98px) { 
+
+    .footer-strip {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-strip > div {
+        gap: 5px;
+    }
+
+    .footer-strip > div > svg,
+    .footer-strip > div > span {
+        font-size: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 500.98px) {
+    
+    .footer-contact > div > div > span, 
+    .footer-contact > div > div > div > span:first-child {
+        font-size: 1.3rem;
+    }
+
+    .footer-contact .address span:last-child {        
+        margin-left: 5px;
+    }
+
+    .footer-contact .subscribe {
+        max-width: 295px;
+    }
+
+    .footer-contact .subscribe input {
+        min-width: unset;
+    }   
+
+}

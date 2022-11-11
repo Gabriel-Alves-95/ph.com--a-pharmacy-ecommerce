@@ -1,0 +1,29 @@
+.not-found-container .not-foung-img { 
+    margin: 100px 0 30px;     
+    width: 100%;    
+}
+
+.not-found-container .home-link {
+    display: block;
+    width: fit-content;
+}
+
+.not-found-container .home-link,
+.not-found-container .home-link:visited {
+    color: #fff;
+    background-color: #44a6f1;
+    padding: 15px 30px;
+    margin: 0 auto;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color .5s ease;
+} 
+
+.not-found-container .home-link:hover {
+    background-color: #2287d0;
+}
+
+.not-found-container .home-link:active {
+    background-color: #4ba6ed;
+    transition: none;
+}

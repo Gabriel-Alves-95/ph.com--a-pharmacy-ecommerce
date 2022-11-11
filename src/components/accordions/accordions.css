@@ -1,0 +1,43 @@
+.MuiPaper-root {
+    position: unset !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.display-settings {
+    margin: 25px 0 30px;
+    display: none;
+}
+
+.display-settings h2 {
+    margin: 0;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 500;  
+}
+
+.display-settings ul {
+    padding: 0;
+}
+
+.display-settings li {
+    list-style: none;
+    text-decoration: none;       
+    margin: 10px 0;
+}
+
+.display-settings a,
+.display-settings a:visited,
+.display-settings a:hover,
+.display-settings a:active {
+    text-decoration: none;
+    color: #212121;
+    
+}
+
+@media screen and (max-width: 900.98px) {
+
+    .display-settings {
+        display: block;
+    }
+
+}
