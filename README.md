@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Ph.com: a React.js e-commerce 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](./src/assets/img/ph-pharmacy-all-devices.png)
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The project](#the-project)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is the final project of the React module composing Infnet's Bootcamp syllabus. It is the e-commerce of the fictitious drugstore *Ph*. For the design, I have tried to mix the elements I most liked from two sources (links below). 
 
-### `npm test`
+The website is responsive and includes a landing page, login and register pages, pages for individual visualization of products and, finally, cart and favorites pages. The customer can add or remove items from cart and favorites. It is also possible to update the quantity of a certain item in cart and the new total price will automatically be recalculated and displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![](./src/assets/img/screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Solution](https://github.com/Gabriel-Alves-95/ph.com--a-pharmacy-ecommerce)
+- [Live](https://ph-pharmacy.netlify.app/)
+- [Design 1](https://www.behance.net/gallery/140419689/Phcom-Online-pharmacy-store-E-commerce?tracking_source=search_projects_recommended%7Cpharmacy+website+design)
+- [Design 2](https://www.behance.net/gallery/138209439/E-commerce-pharmacy-with-delivery)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React.js
+- React Router
+- Material UI
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Through the process of developing this e-commerce:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- I needed to create states to store products in *cart* and in *favorites*. But these values were reset every time the customer went into a new page. This problem could be solved if it was possible to define *global states*. After some research on the internet, I found what I was seeking for: React hook *useContext*. After spending some time learning how to use it, I was able to apply this knowledge in the project. 
 
-## Learn More
+- I got acquainted with Material UI components and how to style them.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- I have also learned how to change the appearence of numeric inputs in firefox and webkit browsers. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Continued development
 
-### Code Splitting
+Future developments for this project include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Creation of a database with *products* and *users* tables.
 
-### Analyzing the Bundle Size
+- Development of a REST API to acess and manipulate data from the database: list products, search product by name, register user and login authentication are the basic features to be implemented.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Modify the landing page to be closer to [Design 1](https://www.behance.net/gallery/140419689/Phcom-Online-pharmacy-store-E-commerce?tracking_source=search_projects_recommended%7Cpharmacy+website+design) and create a catalog page.
 
-### Making a Progressive Web App
+### Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [React Context for Beginners – The Complete Guide (2021)](https://www.freecodecamp.org/news/react-context-for-beginners/) - This article by Reed Barger helped me understand how to employ *useContext* in my project by giving a step-by-step list of what to do.
 
-### Advanced Configuration
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Personal Website](https://gabriel-alves-dev.netlify.app/)
+- [Frontend Mentor](https://www.frontendmentor.io/profile/Gabriel-Alves-95)
+- [Linkedin](https://www.linkedin.com/in/gabriel-alves-webdev/)
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+I thank all the authors of the designs listed above for sharing them in *Behance*, as well as Reed Barger for sharing his article in *freeCodeCamp.org*.
 
-### `npm run build` fails to minify
+I thank [Алексей Безродний](https://www.vecteezy.com/members/dezzzzy) for the image with several devices which I used, after some editing, to open this README. I also thank the platform [vecteezy.com](https://www.vecteezy.com/), where I found the aforementioned image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Last but not least, I thank Ariel Júnior for making the functions *updateCart* and *removeItem* in App.js more readable.
